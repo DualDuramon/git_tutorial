@@ -4,10 +4,68 @@ using UnityEngine;
 
 public class Exercise01 : MonoBehaviour
 {
-    //C#02 변수 강좌 실습
+    //C#02~04 변수 강좌 실습
+ 
+    //enum PlayerStatement { Idle,Move,Attack}
 
     private void Awake() {
 
+        int? intVal;
+
+        intVal = null;
+        Debug.Log(intVal.HasValue);
+        //Debug.Log(intVal.Value);      //null이므로 값을 출력하면 에러 발생
+
+        intVal = 30;
+        Debug.Log(intVal.HasValue);
+        Debug.Log(intVal.Value);
+
+        //var
+        var valueInt = 33;
+        var valueFloat = 33.4567f;
+        var valueString = "문자열입니다.";
+
+        Debug.Log("정수 : " + valueInt);
+        Debug.Log("실수 : " + valueFloat);
+        Debug.Log("문자열 : " + valueString);
+
+
+        /*13. 열거형을 이용한 플레이어의 상태 관리
+        PlayerStatement playerState = PlayerStatement.Idle;
+
+        switch (playerState) {
+            case PlayerStatement.Idle:
+                Debug.Log("Player State : 대기 ");
+                break;
+            case PlayerStatement.Move:
+                Debug.Log("Player State : 이동 ");
+                break;
+            case PlayerStatement.Attack:
+                Debug.Log("Player State : 공격 ");
+                break;
+        }*/
+
+        /*12. 상수를 이용한 플레이어 상태 관리.
+        const int PlayerIdle = 0;
+        const int PlayerMove = 1;
+        const int PlayerAttack = 2;
+
+        int playerState = PlayerAttack;
+
+        switch (playerState) {
+            case PlayerIdle:
+                Debug.Log("Player State : 대기 ");
+                break;
+            case PlayerMove:
+                Debug.Log("Player State : 이동 ");
+                break;
+            case PlayerAttack:
+                Debug.Log("Player State : 공격 ");
+                break;
+        }
+        */
+
+        /*11. 숫자를 문자열로 형 변환하기 - ToString()사용
         string stringVal = "초기화";
         int intVal = 33;
         float floatVal = 12.3456f;
@@ -21,6 +79,8 @@ public class Exercise01 : MonoBehaviour
         //실수 -> 문자열 변환
         stringVal = floatVal.ToString();
         Debug.Log("stringVal : " + stringVal);
+
+        /*
 
         /*10. 문자열을 숫자로 형 변환 II - TryParse() 이용
         string stringVal = "숫자아닌 무언가";
