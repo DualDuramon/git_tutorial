@@ -5,9 +5,9 @@ using System;
 
 public class Exercise03 : MonoBehaviour
 {
-    //C# 06 연산자s
     private void Awake() {
 
+        /* 시프트 연산자
         int a = 3;                          //0000 0011
 
         Debug.Log($"{a} << 1 = {a << 1}");  //왼쪽 시프트 연산. 0000 0110
@@ -33,7 +33,7 @@ public class Exercise03 : MonoBehaviour
         Debug.Log($"10 ^6 = {10 ^ 6}");         // 베타적 논리합 연산자
 
         Debug.Log($"~10 = {~10}");              //보수 연산자
-
+        */
 
         /* 04. 논리연산자, 삼항 연산자.
         bool result = false;
